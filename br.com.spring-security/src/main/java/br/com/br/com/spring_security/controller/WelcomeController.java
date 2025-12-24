@@ -1,4 +1,4 @@
-package br.com.br.com.spring_security;
+package br.com.br.com.spring_security.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +16,7 @@ public class WelcomeController {
     public String users(){
         return "Authorized user";
     }
+
     @GetMapping("/managers")
     @PreAuthorize("hasRole('MANAGERS')")
     public String managers(){
